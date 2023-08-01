@@ -34,7 +34,6 @@
         height: 200px;
         background-color: red;
     }
-
 </style>
 
 <div class="body-login">
@@ -71,7 +70,7 @@
                 <div class="colorSize mt-4">
                     <div class="colorDiv">
                         <div class="colorJudul mb-2">
-                            COLOR
+                            Choose Avatar (buy)
                         </div>
                         <div class="tab-color d-flex gap-3">
                             @for ($i = 0 ; $i
@@ -84,7 +83,7 @@
                 </div>
                 <div class="sizeDiv mt-3">
                     <div class="sizeJudul mb-2">
-                        SIZE
+                        Do you want to visible account? (buy)
                     </div>
                     <div class="tab-size d-flex gap-3 mb-3">
                         @for ($i = 0 ; $i <$countSize ; $i++) <div class="divkotak" style="position: relative">
@@ -104,14 +103,14 @@
                     </div>
                     <div class="row color mb-3">
                         <div class="col sizeJudul">
-                            Color
+                            Choose Avatar (buy)
                         </div>
                         <div class="col color-buy" id="color-buy" style="background-color: #FFFAF0">
                         </div>
                     </div>
                     <div class="row color mb-3">
                         <div class="col sizeJudul">
-                            Size
+                            Do you want to visible account? (buy)
                         </div>
                         <div class="col size-buy" id="size-buy">
                             -
@@ -119,7 +118,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn container btn-submit mt-4 butotn-checkout">CHECK OUT</button>
+                <button type="submit" class="btn container btn-submit mt-4 butotn-checkout">CHAT / VIDEO CALL NOW</button>
             </div>
         </div>
     </form>
@@ -149,9 +148,7 @@
                 size.innerHTML = radioButton.value;
             });
         });
-
     </script>
-
 </div>
 </div>
 @endsection

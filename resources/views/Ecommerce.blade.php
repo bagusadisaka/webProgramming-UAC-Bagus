@@ -6,6 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 @section('content')
     <div id="preloader">
         <div class="jumper">
@@ -33,7 +34,6 @@
         .konten-canvas:hover {
             border: 1px solid #972628;
             transition: border 0.5s ease;
-            /* Add the pulsing animation to the border */
             animation: animate 1s linear forwards;
         }
 
@@ -49,13 +49,12 @@
         }
     </style>
 
-    <!-- ***** Main Banner Area Start ***** -->
     <div class="navbar-konten mb-3" style="margin-left: 80px; margin-right:80px" id="top">
         <div class="konten-nav">
             <div class="row">
                 <div class="mt-4 mb-4" style="display: flex; justify-content:space-between; align-items:center">
                     <div class="judul-website .fontjudul">
-                        <h2>Web Programming</h2>
+                        <h2>ConnectFriend</h2>
                     </div>
                     <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
                         aria-controls="offcanvasWithBothOptions" style="border:none; background-color:transparent;">
@@ -72,19 +71,19 @@
                         <div class="offcanvas-body mt-3">
                             <a class="container-profile p-4 d-flex align-items-center konten-canvas" href="/profile">
                                 <div class="image" style="margin-right: 60px">
-                                    <img src="/images/profile.png" alt="" srcset="">
+                                    <img src="/images/aboutus.png" alt="" srcset="">
                                 </div>
                                 <div class="textprofile" style="color: #972628">
-                                    PROFILE
+                                    NOTIFICATION
                                 </div>
                             </a>
 
                             <a class="container-aboutus p-4 d-flex align-items-center konten-canvas" href="/ecommerce">
                                 <div class="imageaboutus" style="margin-right: 60px">
-                                    <img src="/images/cart.png" alt="" srcset="">
+                                    <img src="/images/profile.png" alt="" srcset="">
                                 </div>
                                 <div class="textaboutus" style="color: #972628">
-                                    E-COMMERCE
+                                    PICK FRIENDS
                                 </div>
                             </a>
 
@@ -93,7 +92,7 @@
                                     <img src="/images/aboutus.png" alt="" srcset="">
                                 </div>
                                 <div class="textaboutus" style="color: #972628">
-                                    ABOUT US
+                                    MESSAGE / VIDEO CALL
                                 </div>
                             </a>
 
@@ -115,27 +114,20 @@
             </div>
         </div>
     </div>
-    <!-- ***** Main Banner Area End ***** -->
 
     <section class="section" id="Images">
         <div class="konten-image" style="margin-left:80px; margin-right:80px;">
-            <img src="/images/thumbnail.avif" alt="" srcset="" class="img-fluid" style="border-radius: 5px">
+            <img src="/images/banner.png" alt="" srcset="" class="img-fluid" style="border-radius: 5px">
         </div>
     </section>
 
-    <section>
-        <img src="{{asset('storage/'. auth()->user()->image)}}" alt="">
-        <img src="{{asset('storage/'. $partner->image)}}" alt="">
-    </section>
-
-    <!-- ***** Men Area Starts ***** -->
     <section class="section" id="men">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
                         <h2>RECOMENDATION</h2>
-                        <span>Recomendation for you two to get the best dress.</span>
+                        <span>Recomendation for you to pick a friend.</span>
                     </div>
                 </div>
             </div>
@@ -151,16 +143,15 @@
                                 <div class="thumb">
                                     <div class="hover-content">
                                         <a href="/checkout/{{$p->id}}">
-                                            <i class="w-[10vw] h-[10vw] p-3 fa fa-shopping-cart"
-                                                style="color: #972628; background-color:#FFFAF0"></i>
+                                            <i class="p-3 material-icons" style="font-size:48px;color: #972628; background-color:#FFFAF0">thumb_up</i>
                                         </a>
                                     </div>
-
                                     <img src="images/{{$p->Image}}.jpeg" alt=""
                                         style="width:320px; height:380px; object-fit:cover;">
                                 </div>
                                 <div class="down-content" style="background-color: #2a2a2a;color:#FFFAF0">
                                     <h4 style="background-color: #2a2a2a;color:#FFFAF0">{{$p->ProductName}}</h4>
+                                    <h8 style="background-color: #2a2a2a;color:#FFFAF0">{{$p->CompanyProduct}}, {{$p->CompanyProduct}}, {{$p->CompanyProduct}}</h8>
                                     <span>@currency($p->Prices)</span>
                                     <ul class="stars">
                                         @for ($i = 1; $i <= $p->Rating; $i++)
@@ -170,23 +161,20 @@
                                 </div>
                             </div>
                             @endforeach
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ***** Men Area Ends ***** -->
 
-    <!-- ***** Women Area Starts ***** -->
     <section class="section" id="women">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>PRODUCT</h2>
-                        <span>This is our brand with high quality dress</span>
+                        <h2>PICK FRIENDS</h2>
+                        <span>This is list of all people in this world.</span>
                     </div>
                 </div>
             </div>
@@ -198,7 +186,7 @@
                     <div class="thumb">
                         <div class="hover-content">
                             <a href="/checkout/{{$p->id}}">
-                                <i class="p-3 fa fa-shopping-cart" style="color: #972628; background-color:#FFFAF0"></i>
+                                <i class="p-3 material-icons" style="font-size:48px;color: #972628; background-color:#FFFAF0">thumb_up</i>
                             </a>
                         </div>
 
@@ -208,6 +196,7 @@
                         style="border:1px solid rgb(0, 0, 0, 0.2); border-radius: 0px 0px 20px 20px; padding:20px; background-color:transparent;">
                         <div class="sidekiri">
                             <h4>{{$p->ProductName}}</h4>
+                            <h8>{{$p->CompanyProduct}}, {{$p->CompanyProduct}}, {{$p->CompanyProduct}}</h8>
                             <span>@currency($p->Prices)</span>
                         </div>
                             <ul class="stars" style="margin-right: 20px">
@@ -225,47 +214,8 @@
 
     <footer>
         <div class="container">
-            <div class="row d-flex justify-content-between">
-                <div class="col-lg-3">
-                    <div class="first-item">
-                        <div class="logo">
-                            <div class="judul-website .fontjudul">
-                                <h2>Web Programming</h2>
-                            </div>
-                        </div>
-                        <ul>
-                            <li><a href="#">9, Kemanggisan, Palmerah Jakarta 11480 Indonesia</a></li>
-                            <li><a href="#">web_programming@anderies.com</a></li>
-                            <li><a href="#">+6281231623030</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Shopping &amp; Categories</h4>
-                    <ul>
-                        <li><a href="#top">Promos</a></li>
-                        <li><a href="#men">Recomendation</a></li>
-                        <li><a href="#women">Dress Product</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Web Programming</h4>
-                    <ul>
-                        <li><a href="#">Homepage</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-12">
                     <div class="under-footer">
-                        <p>Copyright © 2023 Web Programming. All Rights Reserved.
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
+                        <p>Copyright © 2023 ConnectFriend. All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -308,6 +258,5 @@
 
             });
         });
-
     </script>
     @endsection

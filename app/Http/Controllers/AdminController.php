@@ -16,21 +16,11 @@ class AdminController extends Controller
 
     public function updatedata(Request $request,$id){
 
-        // dd($request);
-
         $user = User::all();
         $userchange = User::where('id',$id)->first();
         $userchange->Banned = $request->StatusBanned;
         $userchange->save();
 
-
         return view('pagesprofile',compact('user'));
     }
-
-    // public function admin($id){
-    //     $user = User::where('id',$id)->first();
-
-    //     return view('adminmenu',compact('user'));
-    // }
-
 }

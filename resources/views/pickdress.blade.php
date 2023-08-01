@@ -20,15 +20,6 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
     <style>
-        /* body {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-            background-color: #FFFAF0;
-            overflow: hidden;
-        } */
-
         body {
             overflow: hidden;
             background-color: #FFFAF0;
@@ -273,7 +264,6 @@
         .konten-canvas:hover {
             border: 1px solid #972628;
             transition: border 0.5s ease;
-            /* Add the pulsing animation to the border */
             animation: animate 1s linear forwards;
         }
 
@@ -293,12 +283,6 @@
 </head>
 
 <body>
-
-    <section>
-        <img src="{{asset('storage/'. auth()->user()->image)}}" alt="">
-        <img src="{{asset('storage/'. $partner->image)}}" alt="">
-    </section>
-
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -314,8 +298,6 @@
                     <button type="button" class="btn btn-primary btn-m" data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
                         style="background-color: #972628; color:white; border:none; margin-right:30px">Filter</button>
-                    {{-- <nav class="navbar navbar-light bg-light"> --}}
-                    {{-- <div class="container"> --}}
 
                     <button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
                         aria-controls="offcanvasWithBothOptions" style="border:none; background-color:transparent;">
@@ -332,19 +314,19 @@
                         <div class="offcanvas-body mt-3">
                             <a class="container-profile p-4 d-flex align-items-center konten-canvas" href="/profile">
                                 <div class="image" style="margin-right: 60px">
-                                    <img src="/images/profile.png" alt="" srcset="">
+                                    <img src="/images/aboutus.png" alt="" srcset="">
                                 </div>
                                 <div class="textprofile" style="color: #972628">
-                                    PROFILE
+                                    NOTIFICATION
                                 </div>
                             </a>
 
                             <a class="container-aboutus p-4 d-flex align-items-center konten-canvas" href="/ecommerce">
                                 <div class="imageaboutus" style="margin-right: 60px">
-                                    <img src="/images/cart.png" alt="" srcset="">
+                                    <img src="/images/profile.png" alt="" srcset="">
                                 </div>
                                 <div class="textaboutus" style="color: #972628">
-                                    E-COMMERCE
+                                    PICK FRIENDS
                                 </div>
                             </a>
 
@@ -353,7 +335,7 @@
                                     <img src="/images/aboutus.png" alt="" srcset="">
                                 </div>
                                 <div class="textaboutus" style="color: #972628">
-                                    ABOUT US
+                                    CHAT / VIDEO CALL
                                 </div>
                             </a>
 
@@ -372,13 +354,9 @@
                         </div>
                     </div>
                 </div>
-                {{-- </nav> --}}
         </div>
-
         </nav>
     </div>
-
-
 
     <div class="slide-container">
         <span class="slider-span" id="slider-span1"></span>
@@ -386,7 +364,6 @@
         <span class="slider-span" id="slider-span3"></span>
         <span class="slider-span" id="slider-span4"></span>
         <span class="slider-span" id="slider-span5"></span>
-
 
         <div class="image-slider">
             <div class="konten-dress">
@@ -421,7 +398,6 @@
                     </div>
                     <a href="#slider-span2" class="button" id="button-2" style="position: absolute; left:12; top:0"></a>
                 </div>
-
 
             </div>
             <div class="slides-div" id="slide-3" style=" position: relative;">
@@ -489,47 +465,9 @@
                                 <option class="p-3" style="margin-top: 20px" {{$l->Location}}">{{$l->Location}}</option>
                                 @endforeach
                             </select>
-                            {{-- <div class="dropdown-menu text-center" style="width:100%">
-
-                            </div> --}}
-                        </div>
-                        <div class="range-biaya mt-3">
-                            <label for="customRange2 mb-3" class="form-label">Min Price</label>
-                            <div class="row">
-                                <div class="col-9">
-                                    <input type="range" class="form-range mt-3" min="0" max="50000000" id="customRange2"
-                                        name="MinPrice">
-                                </div>
-                                <div class="col-3 d-flex">
-                                    <div class="rp" style="margin-right: 3px">
-                                        Rp
-                                    </div>
-                                    <div class="valueinput" id="valueinput">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="range-biaya mt-3">
-                            <label for="customRange2 mb-3" class="form-label">Max Price</label>
-                            <div class="row">
-                                <div class="col-9">
-                                    <input type="range" class="form-range mt-3" min="0" max="50000000" id="customRange3"
-                                        name="MaxPrice">
-                                </div>
-                                <div class="col-3 d-flex align-items-end">
-                                    <div class="rp" style="margin-right: 3px">
-                                        Rp
-                                    </div>
-                                    <div class="valueinput1" id="valueinput1">
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-end mt-4">
-                        {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
                         <button type="submit" class="btn" style="background-color: #972628; color:#FFFAF0">Save
                             changes</button>
                     </div>
@@ -539,47 +477,25 @@
     </form>
 </body>
 
-
-
 <script>
     window.onload = function () {
         let clicking = document.getElementById('button-3');
-
         clicking.click();
     }
 
     var rangeInput = document.getElementById("customRange2");
     var rangeInput1 = document.getElementById("customRange3");
 
-    // Tambahkan event listener untuk mendeteksi perubahan pada input range
     rangeInput.addEventListener("input", function () {
-        // Dapatkan nilai (value) dari input range
         var value = rangeInput.value;
-
         let canvas = document.getElementById("valueinput");
-
         canvas.innerHTML = value;
-
-
-        // Tampilkan nilai (value) pada console atau di tempat lain yang diinginkan
-
     });
 
     rangeInput1.addEventListener("input", function () {
-        // Dapatkan nilai (value) dari input range
         var value = rangeInput1.value;
-
         let canvas = document.getElementById("valueinput1");
-
         canvas.innerHTML = value;
-
-
-        // Tampilkan nilai (value) pada console atau di tempat lain yang diinginkan
-
     });
-
 </script>
-
-
-
 </html>

@@ -17,20 +17,18 @@
 </head>
 
 <body>
-
     <div class="body-login m-3">
-        {{-- <div class="container foto-slider" style=" width:60%; height:98vh"> --}}
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style=" width:60%; height:98vh">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/batik1.jpeg" class="d-block w-100"
+                    <img src="images/registerPic-1.jpg" class="d-block w-100"
                     style=" width:60%; height:97vh; object-fit:cover; border-radius:20px" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/batik3.jpeg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
+                    <img src="images/registerPic-2.jpg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/batik4.jpeg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
+                    <img src="images/registerPic-3.jpg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -44,7 +42,6 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        {{-- </div> --}}
         <div class="container section-form p-5" style=" width:40%; height:98vh">
             <div class="container konten-form">
                 <div class="judul text-center mb-4">
@@ -71,14 +68,12 @@
                 </div>
 
                 <div class="signin-link text-center">
-                    Already Have Account ?
-                    <a href="/register">SIGN IN </a>
+                    Don't have an account ?
+                    <a href="/register">REGISTER </a>
                 </div>
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>

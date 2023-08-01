@@ -32,14 +32,14 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style=" width:60%; height:98vh">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/batik1.jpeg" class="d-block w-100"
+                    <img src="images/registerPic-1.jpg" class="d-block w-100"
                     style=" width:60%; height:97vh; object-fit:cover; border-radius:20px" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/batik3.jpeg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
+                    <img src="images/registerPic-2.jpg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/batik4.jpeg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
+                    <img src="images/registerPic-3.jpg" class="d-block w-100" alt="..."  style=" width:60%; height:97vh; object-fit:cover; border-radius:20px">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -73,14 +73,10 @@
                         <div class="row">
                             <div class="col input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text form-login" id="basic-addon1">DT</span>
+                                    <span class="input-group-text form-login" id="basic-addon1">https://www.instagram.com/</span>
                                 </div>
-                                <input type="text" class="form-control form-login" placeholder="Dating Code"
-                                    aria-label="Dating Code" aria-describedby="basic-addon1" name="datingCode" required>
-                            </div>
-                            <div class="col form-group mb-3">
-                                <input type="date" class="form-control form-login" id="exampleInputPassword1"
-                                    placeholder="Birthdate" name="birthDate" required>
+                                <input type="text" class="form-control form-login" placeholder="Instagram Username"
+                                    aria-label="Dating Code" aria-describedby="basic-addon1" name="instagram" required>
                             </div>
                         </div>
                         <div class="row">
@@ -102,6 +98,10 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <input type="date" class="form-control form-login" id="exampleInputPassword1"
+                                placeholder="Birthdate" name="birthDate" required>
+                        </div>
+                        <div class="form-group mt-3">
                             <input type="email" class="form-control form-login" id="exampleInputPassword1"
                                 placeholder="Email" name="email" required>
                         </div>
@@ -114,14 +114,12 @@
                             <input type="file" class="form-control form-login" id="exampleInputPassword1"
                                 placeholder="Image photo" name="image" required>
                         </div>
+
                         <button type="submit" class="btn container btn-submit mt-3">REGISTER</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-
 </body>
-
 </html>

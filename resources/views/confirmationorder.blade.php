@@ -26,7 +26,7 @@
         <div class="total">
             <div class="row">
                 <div class="col" style="font-size: 14px">Payment ( BCA VIRTUAL ACCOUNT )</div>
-                <div class="col d-flex justify-content-end" style="font-size: 14px">09642688665</div>
+                <div class="col d-flex justify-content-end" style="font-size: 14px">09628293632</div>
             </div>
             <div class="row mt-3">
                 <div class="col"> <b> Total:</b> </div>

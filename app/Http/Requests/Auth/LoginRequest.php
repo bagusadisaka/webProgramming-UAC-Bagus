@@ -42,25 +42,6 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        // dd($this->only('email'));
-
-
-        // if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
-        //     $user = User::where('email', '=', $this->only('email'))->first();
-
-        //     if(strcmp($user->Banned,"YES") == 0){
-        //         throw ValidationException::withMessages([
-        //             'email' => trans('auth.failed'),
-        //         ])->redirectTo('banned');
-        //     }
-    
-        //     if($user->Admin == 1){
-        //         throw ValidationException::withMessages([
-        //             'email' => trans('auth.failed'),
-        //         ])->redirectTo('admin');
-        //     }
-        // }
-
         if (Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
 
             $user = User::where('email', '=', $this->only('email'))->first();
@@ -70,19 +51,19 @@ class LoginRequest extends FormRequest
                     'email' => trans('auth.failed'),
                 ])->redirectTo('banned');
             }
-    
+
             if($user->Admin == 1){
                 throw ValidationException::withMessages([
                     'email' => trans('auth.failed'),
                 ])->redirectTo('admin');
             }
-            
+
 
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed'),
             ]);
         }
-        
+
 
         if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
